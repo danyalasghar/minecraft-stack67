@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "stack67",
+	"version": "${version}",
+	"name": "Stack 67",
+	"description": "stacks items to 67 instead of 64 (tuff)",
+	"authors": [
+		"Danyal Asghar"
+	],
+	"contact": {
+		"homepage": "https://guns.lol/danify",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/stack67/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"danyalasghar.stack67.Stack67"
+		],
+		"fabric-datagen": [
+			"danyalasghar.stack67.Stack67DataGenerator"
+		]
+	},
+	"mixins": [
+		"stack67.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
