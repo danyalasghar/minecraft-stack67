@@ -3,13 +3,15 @@
 	"id": "stack67",
 	"version": "${version}",
 	"name": "Stack 67",
-	"description": "stacks items to 67 instead of 64 (tuff)",
+	"description": "Stacks items to 67 instead of 64 (tuff)",
 	"authors": [
 		"Danyal Asghar"
 	],
 	"contact": {
-		"homepage": "https://guns.lol/danify",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"developer": "https://guns.lol/danify",
+		"source": "https://github.com/danyalasghar/minecraft-stack67",
+		"modrinth": "https://modrinth.com/mod/stack-67",
+		"curseforge": "https://www.curseforge.com/minecraft/mc-mods/stack-67"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/stack67/icon.png",
@@ -17,14 +19,18 @@
 	"entrypoints": {
 		"main": [
 			"danyalasghar.stack67.Stack67"
-		],
-		"fabric-datagen": [
-			"danyalasghar.stack67.Stack67DataGenerator"
 		]
 	},
-	"mixins": [
-		"stack67.mixins.json"
-	],
+	"custom": {
+		"modmenu": {
+			"links": {
+				"Contact Dev": "https://guns.lol/danify",
+				"Source Code": "https://github.com/danyalasghar/minecraft-stack67",
+				"Modrinth Link": "https://modrinth.com/mod/stack-67",
+				"Curseforge Link": "https://www.curseforge.com/minecraft/mc-mods/stack-67"
+			}
+		}
+	},
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~26.2",

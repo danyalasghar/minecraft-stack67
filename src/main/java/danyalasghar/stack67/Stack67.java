@@ -2,17 +2,16 @@ package danyalasghar.stack67;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.resources.Identifier;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
+import net.minecraft.core.component.DataComponents;
 
 public class Stack67 implements ModInitializer {
-	public static final String MOD_ID = "stack67";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		DefaultItemComponentEvents.MODIFY.register(context -> context.modify(
+                item -> item.components().getOrDefault(DataComponents.MAX_STACK_SIZE, 64) == 64,
+                (builder, item) -> builder.set(DataComponents.MAX_STACK_SIZE, 67)
+        ));
 	}
+
 }
